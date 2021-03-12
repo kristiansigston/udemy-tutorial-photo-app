@@ -51,7 +51,7 @@
           </li>
         </ul>
         <span class="navbar-text">
-          <ul class="nav navbar-right col-md-4">
+          <ul class="nav navbar-right ">
             <% if current_user %>
               <li class="col-md-8 user-name">
                 <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe,
@@ -61,7 +61,7 @@
               <li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path,
                 class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
             <% else %>
-              <li class="col-md-4 pull-right">
+              <li class="pull-right">
                 <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
               </li>
             <% end %>
